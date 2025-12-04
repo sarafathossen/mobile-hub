@@ -6,9 +6,9 @@ import Footer from '../Component/Footer ';
 const AuthLayout = () => {
     return (
         <div>
-           <header>
+           
             <Header></Header>
-            </header> 
+            
             <main>
                 <Outlet>
 

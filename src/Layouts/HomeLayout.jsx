@@ -16,9 +16,9 @@ const HomeLayout = () => {
     return (
         <div className="bg-base-100 dark:bg-gray-900 text-base-content dark:text-gray-200 transition-colors duration-500">
             
-            <header>
+            
                 <Header />
-            </header>
+         
 
             <main className="w-11/12 mx-auto min-h-screen transition-colors duration-500">
                 <Banner />
