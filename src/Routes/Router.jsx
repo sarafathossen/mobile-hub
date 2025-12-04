@@ -13,6 +13,8 @@ import UpdateProfile from "../Pages/UpdateProfile";
 import ErrorPage from "../Pages/ErrorPage";
 import AboutUs from "../Pages/AboutUs";
 import Loading from "../Pages/Loading";
+import ContactUs from "../Pages/ContactUs";
+import Support from "../Pages/Support";
 
 const router = createBrowserRouter([
     {
@@ -23,29 +25,37 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>,
                 loader: () => fetch('/appdata.json'),
-                hydrateFallbackElement:<Loading></Loading>,
+                hydrateFallbackElement: <Loading></Loading>,
             },
 
 
         ]
     },
     {
-        path:'/about-us',
-        element:<AboutUs></AboutUs>,
+        path: '/about-us',
+        element: <AboutUs></AboutUs>,
+    },
+    {
+        path: '/contact-us',
+        element: <ContactUs></ContactUs>,
+    },
+    {
+        path: '/support',
+        element: <Support></Support>,
     },
     {
         path: '/all-games',
         element: <AllGame></AllGame>,
         loader: () => fetch('/appdata.json'),
-        hydrateFallbackElement:<Loading></Loading>,
+        hydrateFallbackElement: <Loading></Loading>,
     },
     {
         path: '/game-details/:id',
-        element: <PrivateRouts>
+        element:
             <GameDetails></GameDetails>,
-        </PrivateRouts>,
+
         loader: () => fetch('/appdata.json'),
-        hydrateFallbackElement:<Loading></Loading>,
+        hydrateFallbackElement: <Loading></Loading>,
     },
     {
         path: '/auth',
@@ -72,7 +82,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/auth/update-profile',
-                element:<UpdateProfile></UpdateProfile> ,
+                element: <UpdateProfile></UpdateProfile>,
             },
         ]
     },
